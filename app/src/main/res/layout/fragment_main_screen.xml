@@ -111,18 +111,61 @@
         android:layout_height="0dp"/>
 
 
-    <Button
+    <RelativeLayout
         android:id="@+id/buttonBasket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/my_cart_title_button"
-        android:gravity="center"
-        app:icon="@drawable/ic_basket"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:background="@drawable/button_cart_bg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:contentDescription="@string/app_name"
+                android:layout_width="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_app"
+                app:tint="@color/white"
+                android:src="@drawable/ic_basket"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="@font/open_sans_semibold"
+                android:background="@color/color_app"
+                android:text="@string/my_cart_title_button"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tvListSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_test_count"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@drawable/raunded_textview_cart"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
