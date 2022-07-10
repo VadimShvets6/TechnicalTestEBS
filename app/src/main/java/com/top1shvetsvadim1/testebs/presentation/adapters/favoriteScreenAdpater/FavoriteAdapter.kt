@@ -16,6 +16,7 @@ import java.util.*
 
 class FavoriteAdapter : ListAdapter<ProductItem, ItemViewHolder>(FavoritDiffCallback) {
 
+    var onProductItemClickListeners: ((ProductItem) -> Unit)? = null
     var onRemoveFromFavouriteClickListeners : ((ProductItem) ->Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -38,6 +39,9 @@ class FavoriteAdapter : ListAdapter<ProductItem, ItemViewHolder>(FavoritDiffCall
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val productItem = getItem(position)
         val binding = holder.binding
+        binding.root.setOnClickListener {
+            onProductItemClickListeners?.invoke(productItem)
+        }
         when (binding) {
             is ItemProductFavoriteBinding -> {
                 with(binding) {

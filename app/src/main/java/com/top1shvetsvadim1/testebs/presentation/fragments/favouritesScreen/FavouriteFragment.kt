@@ -60,6 +60,11 @@ class FavouriteFragment : Fragment() {
                 }
             }.show()
         }
+        mProductAdapter.onProductItemClickListeners = {
+            findNavController().navigate(
+                FavouriteFragmentDirections.actionFavouriteFragmentToProductDetailFragment(it.id)
+            )
+        }
         binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
