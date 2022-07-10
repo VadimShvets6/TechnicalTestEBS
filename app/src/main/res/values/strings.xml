@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TechnicalTestEBS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="price">$ %s,-</string>
+    <string name="favorites_text_view">Favorites</string>
+    <string name="my_cart_title_button">My cart</string>
+    <string name="filters_text_view">Filters</string>
+    <string name="information_text_view">Information</string>
+    <string name="add_to_cart_title_button">Add to cart</string>
+    <string name="buy_now_title_button">buy now</string>
+</resources>
