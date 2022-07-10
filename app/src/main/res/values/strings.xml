@@ -9,4 +9,5 @@
     <string name="information_text_view">Information</string>
     <string name="add_to_cart_title_button">Add to cart</string>
     <string name="buy_now_title_button">buy now</string>
+    <string name="text_view_test_count">0</string>
 </resources>
