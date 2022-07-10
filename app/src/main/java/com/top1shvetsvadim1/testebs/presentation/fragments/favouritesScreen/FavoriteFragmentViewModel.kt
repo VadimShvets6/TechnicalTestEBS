@@ -2,8 +2,6 @@ package com.top1shvetsvadim1.testebs.presentation.fragments.favouritesScreen
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.top1shvetsvadim1.testebs.data.repositoryImpl.ProductRepositoryImpl
 import com.top1shvetsvadim1.testebs.domain.GetProductFavoriteListUseCase

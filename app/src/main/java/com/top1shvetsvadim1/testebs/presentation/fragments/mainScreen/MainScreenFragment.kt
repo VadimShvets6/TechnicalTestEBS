@@ -1,21 +1,18 @@
 package com.top1shvetsvadim1.testebs.presentation.fragments.mainScreen
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.top1shvetsvadim1.testebs.R
 import com.top1shvetsvadim1.testebs.databinding.FragmentMainScreenBinding
 import com.top1shvetsvadim1.testebs.presentation.adapters.mainScreenAdapter.ProductAdapter
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import java.lang.RuntimeException
 
 class MainScreenFragment : Fragment() {
 

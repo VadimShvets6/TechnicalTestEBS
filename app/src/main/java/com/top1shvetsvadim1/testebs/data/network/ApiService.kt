@@ -1,6 +1,5 @@
 package com.top1shvetsvadim1.testebs.data.network
 
-import androidx.lifecycle.LiveData
 import com.top1shvetsvadim1.testebs.domain.ProductItem
 import com.top1shvetsvadim1.testebs.domain.ProductList
 import retrofit2.Response

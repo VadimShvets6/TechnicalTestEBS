@@ -1,12 +1,15 @@
 package com.top1shvetsvadim1.testebs.presentation.fragments.mainScreen
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.top1shvetsvadim1.testebs.data.pagingSource.ProductPagingSource
 import com.top1shvetsvadim1.testebs.data.network.ApiFactory
+import com.top1shvetsvadim1.testebs.data.pagingSource.ProductPagingSource
 import com.top1shvetsvadim1.testebs.data.repositoryImpl.ProductRepositoryImpl
 import com.top1shvetsvadim1.testebs.domain.InsertItemToFavouriteUseCase
 import com.top1shvetsvadim1.testebs.domain.ProductItem

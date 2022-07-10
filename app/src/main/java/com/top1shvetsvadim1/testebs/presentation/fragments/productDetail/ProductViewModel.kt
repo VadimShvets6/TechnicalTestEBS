@@ -1,7 +1,10 @@
 package com.top1shvetsvadim1.testebs.presentation.fragments.productDetail
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.top1shvetsvadim1.testebs.data.repositoryImpl.ProductRepositoryImpl
 import com.top1shvetsvadim1.testebs.domain.GetProductItemByIdUseCase
 import com.top1shvetsvadim1.testebs.domain.ProductItem
@@ -24,7 +27,7 @@ class ProductViewModel(application: Application) : AndroidViewModel(application)
     val product: LiveData<ProductItem>
         get() = _product
 
-    fun getProductById(id : Int){
+    fun getProductById(id: Int) {
         val deferred = viewModelScope.async {
             _state.value = Loading(true)
             val result = getProductItemByIdUseCase(id)
