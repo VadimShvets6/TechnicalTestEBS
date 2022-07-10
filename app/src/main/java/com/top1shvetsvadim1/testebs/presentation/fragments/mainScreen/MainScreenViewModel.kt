@@ -23,13 +23,13 @@ class MainScreenViewModel(application: Application) : AndroidViewModel(applicati
     val state: LiveData<State>
         get() = _state
 
-    val listData = Pager(PagingConfig(pageSize = 1)) {
-        ProductPagingSource(apiService)
-    }.flow.cachedIn(viewModelScope)
-
     private val repository = ProductRepositoryImpl(application)
     private val insertItemToFavouriteUseCase = InsertItemToFavouriteUseCase(repository)
     private val removeFromFavoritesUseCase = RemoveFromFavoritesUseCase(repository)
+
+    val listData = Pager(PagingConfig(pageSize = 1)) {
+        ProductPagingSource(apiService)
+    }.flow.cachedIn(viewModelScope)
 
     fun deleteFromFavorite(productItem: ProductItem) {
         if (productItem.isFavorite) {
