@@ -1,6 +1,5 @@
-package com.top1shvetsvadim1.testebs.presentation.pagingSource
+package com.top1shvetsvadim1.testebs.data.pagingSource
 
-import androidx.lifecycle.LiveData
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.top1shvetsvadim1.testebs.data.network.ApiService

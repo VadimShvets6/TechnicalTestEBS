@@ -5,13 +5,12 @@ import androidx.lifecycle.*
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.top1shvetsvadim1.testebs.presentation.pagingSource.ProductPagingSource
+import com.top1shvetsvadim1.testebs.data.pagingSource.ProductPagingSource
 import com.top1shvetsvadim1.testebs.data.network.ApiFactory
 import com.top1shvetsvadim1.testebs.data.repositoryImpl.ProductRepositoryImpl
 import com.top1shvetsvadim1.testebs.domain.InsertItemToFavouriteUseCase
 import com.top1shvetsvadim1.testebs.domain.ProductItem
 import com.top1shvetsvadim1.testebs.domain.RemoveFromFavoritesUseCase
-import com.top1shvetsvadim1.testebs.presentation.Loading
 import com.top1shvetsvadim1.testebs.presentation.State
 import kotlinx.coroutines.launch
 
